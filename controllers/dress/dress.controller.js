@@ -23,6 +23,7 @@ exports.create = (request, response) => {
     }
 
     return Dress.create(dress, (error, data) => {
+        console.log(error)
         if (error) {
             return response.status(500).send({
                 message:

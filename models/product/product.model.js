@@ -32,7 +32,7 @@ Product.create = (Product, result) => {
 
 Product.find = (result) => {
   db.query(`SELECT product.id, product.title, product.description, product.price, product.promo_price, product.date_delivery,
-            product.size1, product.size2, product.size3, product.size4, product.size6, product.size7, product.size8,
+            product.size1, product.size2, product.size3, product.size4, product.size6, product.size7, product.size8, product.dress_id,
             img1.base as base1, img2.base as base2, img3.base as base3,
             product.image_id,
             product.image_id_2, 
