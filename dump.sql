@@ -48,3 +48,8 @@ CREATE TABLE product (
     size8 VARCHAR(20) NULL
 );
 
+CREATE TABLE promoCode (
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    name VARCHAR(255) NULL,
+    percent VARCHAR(255) NULL
+);
