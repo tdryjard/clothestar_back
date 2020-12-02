@@ -45,11 +45,20 @@ CREATE TABLE product (
     size5 VARCHAR(20) NULL,
     size6 VARCHAR(20) NULL,
     size7 VARCHAR(20) NULL,
-    size8 VARCHAR(20) NULL
+    size8 VARCHAR(20) NULL,
+    stock INT NULL
 );
 
 CREATE TABLE promoCode (
     id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
     name VARCHAR(255) NULL,
     percent VARCHAR(255) NULL
+);
+
+CREATE TABLE advice (
+    id INT PRIMARY KEY NOT NULL AUTO_INCREMENT,
+    rate VARCHAR(255) NULL,
+    comment VARCHAR(255) NULL,
+    person VARCHAR(255) NULL,
+    product_id INT NULL
 );

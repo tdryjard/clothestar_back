@@ -12,6 +12,7 @@ const image = require('./image/image.route')
 const product = require('./product/product.route')
 const dress = require('./dress/dress.route')
 const star = require('./star/star.route')
+const advice = require('./advice/advice.route')
 const db = require('../models/database')
 
 router.use(cookieParser());
@@ -25,6 +26,8 @@ router.use('/product', cors({ credentials: true, origin: process.env.ORIGIN_URL 
 router.use('/dress', cors({ credentials: true, origin: process.env.ORIGIN_URL }), dress)
 
 router.use('/star', cors({ credentials: true, origin: process.env.ORIGIN_URL }), star)
+
+router.use('/advice', cors({ credentials: true, origin: process.env.ORIGIN_URL }), advice)
 
 router.use('/create-customer', cors({ credentials: true, origin: process.env.ORIGIN_URL }), async (req, res) => {
   // Create a new customer object
@@ -102,9 +105,7 @@ router.use('/cookie', cors({ credentials: true, origin: process.env.ORIGIN_URL }
 })
 
 router.use('/promoCode', cors({ credentials: true, origin: process.env.ORIGIN_URL }), function (req, res) {
-  console.log(req)
   db.query(`SELECT * from promoCode where name = '${req.body.promoCode}'`, (err, dbResult) => {
-    console.log(dbResult, err, 'dalu')
     if (err) {
       return err
     }

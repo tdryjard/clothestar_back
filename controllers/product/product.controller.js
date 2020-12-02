@@ -15,7 +15,8 @@ exports.create = (request, response) => {
         image_id_2,
         image_id_3,
         dress_id,
-        sizes
+        sizes,
+        stock
     } = request.body;
 
     // Creer un utilisateur
@@ -36,7 +37,8 @@ exports.create = (request, response) => {
         size5: sizes[4] || null,
         size6: sizes[5] || null,
         size7: sizes[6] || null,
-        size8: sizes[7] || null
+        size8: sizes[7] || null,
+        stock : stock || null
     });
 
     if (!request.body) {

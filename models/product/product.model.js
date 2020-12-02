@@ -36,7 +36,8 @@ Product.find = (result) => {
             img1.base as base1, img2.base as base2, img3.base as base3,
             product.image_id,
             product.image_id_2, 
-            product.image_id_3
+            product.image_id_3,
+            product.stock
             FROM product
             LEFT JOIN image as img1 ON product.image_id = img1.id
             LEFT JOIN image as img2 ON product.image_id_2 = img2.id
